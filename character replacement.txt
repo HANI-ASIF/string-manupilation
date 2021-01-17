@@ -1,0 +1,27 @@
+        Declare find, replace : Char
+        Declare str1 : String
+        Declare charaddress : Integer
+        Declare count : Integer
+        Declare mychar : Char
+
+        str1 ? ""
+        mychar ? ''
+        find ? ''
+        replace ? ''
+        charaddress ? 0
+        count ? 0
+
+        output("write the string you want to be edited: ")
+        str1 ? Console.ReadLine
+        output("write the character you want to be replaced: ")
+        find ? Console.ReadLine
+        output("write the character you want to be substituted: ")
+        replace ? Console.ReadLine
+        For count ? 1 To Len(str1)
+            mychar ? Mid(str1, count, 1)
+            If mychar ? find Then
+                Mid(str1, count, 1) ? replace
+
+            End If
+        Next
+        output("string with replaced character: " & str1)
